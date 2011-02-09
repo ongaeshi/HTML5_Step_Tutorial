@@ -9,7 +9,7 @@ function changeCpick(obj){
   updateBGColorIfEnd();
 }
 
-window.addEventListener("load", function() {
+addEvent(window, "load", function() {
   if (!isSetBGColor())
     setBGColor(document.getElementById("t2").value);
   else
@@ -17,4 +17,4 @@ window.addEventListener("load", function() {
   
   if (getStateKind() == STATE_END)
     updateBGColor();
-}, true);
+});

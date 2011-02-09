@@ -4,7 +4,7 @@
 // @author ongaeshi
 // @date   2011/01/29
 
-window.addEventListener("load", function() {
+addEvent(window, "load", function() {
   var state = getState();
 
   if (state.chkStatus())
@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 
   //@debug
   //document.getElementById("ClearButton").style.display = "";
-}, true);
+});
 
-window.addEventListener("unload", function() {
-}, true);
+addEvent(window, "unload", function() {
+});

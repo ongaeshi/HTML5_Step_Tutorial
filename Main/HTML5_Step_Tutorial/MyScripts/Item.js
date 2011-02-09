@@ -48,7 +48,7 @@ var Item = (function() {
 
     text_fade: function(kind) {
       Canvas.fade_in(getCanvas(table[kind].canvas), '#FFFDED', 0.015);
-    },
+    }
   };
 })();
 

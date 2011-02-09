@@ -1211,6 +1211,16 @@ _add_event_listener(window, "load", _init);
 var cpicks = [];
 
 function _init() {
+  var isMSIE = /*@cc_on!@*/false;
+
+  if (!isMSIE)
+    _initNormal();
+  else
+    _initIE();
+}
+
+
+function _initNormal() {
 	var elms = _get_elements_by_class_name(document, "html5jp-cpick");
 	var n = 0;
 	for( var i=0; i<elms.length; i++ ) {
@@ -1245,10 +1255,57 @@ function _init() {
 	if( n > 0 && document.uniqueID ) {
 		if (!document.namespaces["v"]) {
 			document.namespaces.add("v", "urn:schemas-microsoft-com:vml");
-			var style_sheet = document.createStyleSheet();
+		  var style_sheet = document.createStyleSheet();
 			style_sheet.cssText = "v\\:rect, v\\:fill { behavior: url(#default#VML); display:inline-block; }";
 		}
 	}
+}
+
+// パッチ:
+//  _get_elements_by_class_name("html5jp-cpick") の結果、
+// 正しくHTMLCollectionが取れていないのが原因。
+//
+// 今回のプログラム中は1ページで一つしか使っていないので、
+// id == html5jp-cpick なものをピッカー化する構造にパッチを当てる
+//
+function _initIE() {
+  var n = 0;
+
+  var elm = document.getElementById("t2");
+  // parse parameters in the class attribute
+  var p = {};
+  var m = elm.className.match(/\[([^\]]+)\]/);
+  if(m && m[1]) {
+    var parts = m[1].split(";");
+    for( var j=0; j<parts.length; j++ ) {
+      var pair = parts[j];
+      if(pair == "") { continue; }
+      var m2 = pair.match(/^([a-zA-Z0-9\-\_]+)\:([a-zA-Z0-9\-\_\#\(\)\,\.]+)$/);
+      if( ! m2 ) { continue; }
+      var k = m2[1];
+      var v = m2[2];
+      p[k] = v;
+    }
+  }
+  // determin the target element
+  var target = elm;
+  if( typeof(p.target) != "undefined" ) {
+    var el = document.getElementById(p.target);
+    if( ! el ) { return; }
+    target = el;
+  }
+  // prepare a color cpicker
+  _prepare_cpick(p, elm, target);
+  //
+  n ++;
+
+  if( n > 0 && document.uniqueID ) {
+    if (!document.namespaces["v"]) {
+      document.namespaces.add("v", "urn:schemas-microsoft-com:vml");
+      var style_sheet = document.createStyleSheet();
+      style_sheet.cssText = "v\\:rect, v\\:fill { behavior: url(#default#VML); display:inline-block; }";
+    }
+  }
 }
 
 function _prepare_cpick(p, trigger, target) {

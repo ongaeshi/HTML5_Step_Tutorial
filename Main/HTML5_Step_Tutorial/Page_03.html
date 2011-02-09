@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen,print" href="Page_03_files/Page_03.css" />
     <!--[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='Page_03_files/Page_03IE.css'/><![endif]-->
     <!--[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='Media/IE8.css'/><![endif]-->
+    <!--[if IE]><script type="text/javascript" src="MyScripts/excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="MyScripts/MyLib.js"></script>
     <script type="text/javascript" src="MyScripts/State.js"></script>
     <script type="text/javascript" src="MyScripts/PageCounter.js"></script>
@@ -107,7 +108,7 @@
 
 
           <div style="position: absolute; top: 451px; left: 37px; z-index: 2; ">
-            <p><canvas id="canvas" width="624" height="162" onclick="onclick_canvas(event)"></canvas></p>
+            <canvas id="canvas" width="624" height="162" onclick="onclick_canvas(event)"></canvas>
             Speed :
             <button onclick="onclick_lbutton()">&lt;&lt;</button>
             <input id="speedmetor" size="2" onchange="onchange_text(this)"></input>
@@ -116,7 +117,7 @@
           
 
 
-          <div id="id7" style="height: 28px; left: 37px; position: absolute; top: 438px; width: 525px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id7" style="height: 28px; left: 37px; position: absolute; top: 420px; width: 525px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
             <div class="text-content graphic_textbox_layout_style_default_External_525_28" style="padding: 0px; ">
               <div class="graphic_textbox_layout_style_default">
                 <p style="padding-bottom: 0pt; padding-top: 0pt; " class="paragraph_style_6"><span style="font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 15px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 28px; ">キャンバスのデモです。</span><span style="font-family: 'LucidaGrande-Bold', 'Lucida Grande', 'Lucida Console', sans-serif; font-size: 15px; font-stretch: normal; font-style: normal; font-weight: 700; line-height: 22px; ">↓</span><span style="font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 15px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 28px; ">の画面をクリック！！</span></p>

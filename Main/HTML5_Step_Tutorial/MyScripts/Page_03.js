@@ -98,7 +98,7 @@ Ball.prototype = {
     ctx.fillStyle = this.color;
     ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI*2, false);
     ctx.fill();
-  },
+  }
 };
 
 var procAnim = function() {
@@ -169,7 +169,7 @@ var updateSpeedMetor = function(val) {
   document.getElementById("speedmetor").value = eval(value.toFixed(1));
 }
 
-window.addEventListener("load", function() {
+addEvent(window, "load", function() {
   // 背景色更新
   updateBGColorIfEnd();
 
@@ -179,7 +179,7 @@ window.addEventListener("load", function() {
   // 初期値
   document.getElementById("speedmetor").value = "1.0";
 
-}, true);
+});
 
 
 

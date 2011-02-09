@@ -4,7 +4,7 @@
 // @author ongaeshi
 // @date   2011/01/30
 
-// --- Event ------------------------------------
+// --- 互換性確保 ------------------------------------
 
 // Eventオブジェクトの互換性を上げる
 var fixEvent = function(ev) {
@@ -20,6 +20,16 @@ var fixEvent = function(ev) {
 
   return ev;
 }
+
+var addEvent = function(obj,type,fn) {
+  if(obj.attachEvent) {
+    obj.attachEvent("on"+type,fn);
+  } else {
+    obj.addEventListener(type,fn,false);
+  }
+}
+
+var isMSIE = /*@cc_on!@*/false; 
 
 // --- Math ------------------------------------  
 
@@ -49,7 +59,7 @@ var MyMath = (function() {
 
     rad2deg: function(radian) {
       return ( radian * 180 / Math.PI );
-    },
+    }
   };
 })();
 

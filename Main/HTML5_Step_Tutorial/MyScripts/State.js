@@ -36,7 +36,7 @@ var state_start = {
 
   onLoad: function() {
     // do nothing.
-  },
+  }
 }
 
 var state_item02_open = {
@@ -69,7 +69,7 @@ var state_item02_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_item02 = {
@@ -85,7 +85,7 @@ var state_item02 = {
   onLoad: function() {
     Item.text(ITEM_01); Item.arrow(ITEM_01);
     Item.text(ITEM_02);
-  },
+  }
 }
 
 var state_item03_open = {
@@ -119,7 +119,7 @@ var state_item03_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_item03 = {
@@ -136,7 +136,7 @@ var state_item03 = {
     Item.text(ITEM_01); Item.arrow(ITEM_01);
     Item.text(ITEM_02); Item.arrow(ITEM_02);
     Item.text(ITEM_03);
-  },
+  }
 }
 
 var state_item04_open = {
@@ -171,7 +171,7 @@ var state_item04_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_item04 = {
@@ -187,7 +187,7 @@ var state_item04 = {
     Item.text(ITEM_02); Item.arrow(ITEM_02);
     Item.text(ITEM_03); Item.arrow(ITEM_03);
     Item.text(ITEM_04);
-  },
+  }
 }
 
 var state_item05_open = {
@@ -223,7 +223,7 @@ var state_item05_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_item05 = {
@@ -240,7 +240,7 @@ var state_item05 = {
     Item.text(ITEM_03); Item.arrow(ITEM_03);
     Item.text(ITEM_04); Item.arrow(ITEM_04);
     Item.text(ITEM_05); 
-  },
+  }
 }
 
 var state_item06_open = {
@@ -277,7 +277,7 @@ var state_item06_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_item06 = {
@@ -295,7 +295,7 @@ var state_item06 = {
     Item.text(ITEM_04); Item.arrow(ITEM_04);
     Item.text(ITEM_05); Item.arrow(ITEM_05);
     Item.text(ITEM_06);
-  },
+  }
 }
 
 var state_end_open = {
@@ -333,7 +333,7 @@ var state_end_open = {
 
       counter++;
     }, 16);
-  },
+  }
 }
 
 var state_end = {
@@ -350,7 +350,7 @@ var state_end = {
     Item.text(ITEM_06); Item.arrow(ITEM_06);
     document.getElementById("StaffRoll").style.display = "";
     updateBGColor();
-  },
+  }
 }
 
 

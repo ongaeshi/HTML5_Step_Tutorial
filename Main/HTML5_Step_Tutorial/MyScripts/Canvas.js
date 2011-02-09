@@ -37,7 +37,11 @@ var Canvas = (function() {
         ctx.strokeStyle = ARROW_COLOR;
         ctx.lineWidth = ARROW_SIZE;
 
-        ctx.clearRect(x, y, ARROW_RANGE, ARROW_RANGE);
+	// IEは部分クリアに対応していない？
+	// キャンバスが丸ごと消されるので、IEの時は諦めて上書き。
+	// 少し矢印が太って表示されてしまう。
+        if (!isMSIE)
+	  ctx.clearRect(x, y, ARROW_RANGE, ARROW_RANGE);
 
         if (counter <= ARROW_1ST_FRAME) {
           rate = MyMath.rate(0, ARROW_1ST_FRAME, counter);

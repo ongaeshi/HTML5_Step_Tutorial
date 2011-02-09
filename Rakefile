@@ -121,6 +121,7 @@ file dst(FILES[2]) => [src(FILES[2])] do |t|
 EOF
 
     to = <<EOF
+    <!--[if IE]><script type="text/javascript" src="MyScripts/excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="MyScripts/MyLib.js"></script>
     <script type="text/javascript" src="MyScripts/State.js"></script>
     <script type="text/javascript" src="MyScripts/PageCounter.js"></script>
@@ -139,12 +140,21 @@ EOF
 EOF
     to = <<EOF
           <div style="position: absolute; top: 451px; left: 37px; z-index: 2; ">
-            <p><canvas id="canvas" width="624" height="162" onclick="onclick_canvas(event)"></canvas></p>
+            <canvas id="canvas" width="624" height="162" onclick="onclick_canvas(event)"></canvas>
             Speed :
             <button onclick="onclick_lbutton()">&lt;&lt;</button>
             <input id="speedmetor" size="2" onchange="onchange_text(this)"></input>
             <button onclick="onclick_rbutton()">&gt;&gt;</button>
           </div>
+EOF
+
+    insert_file(f, from, to)
+
+    from = <<EOF
+          <div id="id7" style="height: 28px; left: 37px; position: absolute; top: 438px; width: 525px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+EOF
+    to = <<EOF
+          <div id="id7" style="height: 28px; left: 37px; position: absolute; top: 420px; width: 525px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
 EOF
 
     insert_file(f, from, to)
@@ -249,7 +259,7 @@ EOF
     to = <<EOF
                 <p style="padding-bottom: 0pt; " class="paragraph_style_7"><span style="font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 18px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 27px; ">好きな色をクリック！</span>  </p>
                 <div class="cpick">
-                  <input type="text" name="c2" value="#878585" size="36" id="t2" class="html5jp-cpick [coloring:true;callback:changeCpick]" />
+                  <input type="text" name="c2" value="#878585" size="36" id="html5jp-cpick" class="html5jp-cpick [coloring:true;callback:changeCpick]" />
                 </div>
 EOF
     insert_file(f, from, to)
@@ -267,6 +277,7 @@ file dst("index.html") => [src("index.html")] do |t|
 EOF
 
     to = <<EOF
+    <!--[if IE]><script type="text/javascript" src="MyScripts/excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="MyScripts/PageCounter.js"></script>
     <script type="text/javascript" src="MyScripts/MyLib.js"></script>
     <script type="text/javascript" src="MyScripts/Canvas.js"></script>
@@ -298,7 +309,7 @@ EOF
 EOF
     to = <<EOF
           <div>
-            <p><canvas id="canvas_02" width="550" height="60" style="position: absolute; top: 193px; left: 151px; z-index: 2; display: none;"></canvas></p>
+            <canvas id="canvas_02" width="550" height="60" style="position: absolute; top: 193px; left: 151px; z-index: 2; display: none;"></canvas>
           </div>
 
           <div id="Page_03" style="height: 54px; left: 152px; position: absolute; top: 267px; width: 550px; z-index: 1; display:none" class="style_SkipStroke_6 shape-with-text">
@@ -310,7 +321,7 @@ EOF
 EOF
     to = <<EOF
           <div>
-            <p><canvas id="canvas_03" width="550" height="60" style="position: absolute; top: 267px; left: 152px; z-index: 2; display: none;"></canvas></p>
+            <canvas id="canvas_03" width="550" height="60" style="position: absolute; top: 267px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
           <div id="Page_04" style="height: 54px; left: 152px; position: absolute; top: 343px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
@@ -322,7 +333,7 @@ EOF
 EOF
     to = <<EOF
           <div>
-            <p><canvas id="canvas_04" width="550" height="60" style="position: absolute; top: 343px; left: 152px; z-index: 2; display: none;"></canvas></p>
+            <canvas id="canvas_04" width="550" height="60" style="position: absolute; top: 343px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
           <div id="Page_05" style="height: 54px; left: 152px; position: absolute; top: 423px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
@@ -334,7 +345,7 @@ EOF
 EOF
     to = <<EOF
           <div>
-            <p><canvas id="canvas_05" width="550" height="60" style="position: absolute; top: 423px; left: 152px; z-index: 2; display: none;"></canvas></p>
+            <canvas id="canvas_05" width="550" height="60" style="position: absolute; top: 423px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
           <div id="Page_06" style="height: 54px; left: 152px; position: absolute; top: 502px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
@@ -346,11 +357,11 @@ EOF
 EOF
     to = <<EOF
           <div>
-            <p><canvas id="canvas_06" width="550" height="60" style="position: absolute; top: 502px; left: 152px; z-index: 2; display: none;"></canvas></p>
+            <canvas id="canvas_06" width="550" height="60" style="position: absolute; top: 502px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
           <div>
-            <p><canvas id="canvas_arrow" width="64" height="600" style="position: absolute; top: 0px; left:95px; z-index: 2; "></canvas></p>
+            <canvas id="canvas_arrow" width="64" height="600" style="position: absolute; top: 0px; left:95px; z-index: 2; "></canvas>
           </div>
 
           <div id="StaffRoll" style="height: 46px; left: 26px; position: absolute; top: 604px; width: 648px; z-index: 1; display: none;" class="style_SkipStroke_7 shape-with-text">
