@@ -4,7 +4,7 @@
 // @author ongaeshi
 // @date   2011/01/30
 
-// --- Event ------------------------------------
+// --- 互換性確保 ------------------------------------
 
 // Eventオブジェクトの互換性を上げる
 var fixEvent = function(ev) {
@@ -28,6 +28,8 @@ var addEvent = function(obj,type,fn) {
     obj.addEventListener(type,fn,false);
   }
 }
+
+var isMSIE = /*@cc_on!@*/false; 
 
 // --- Math ------------------------------------  
 
