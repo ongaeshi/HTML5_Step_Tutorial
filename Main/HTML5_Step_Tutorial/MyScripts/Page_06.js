@@ -11,9 +11,9 @@ function changeCpick(obj){
 
 addEvent(window, "load", function() {
   if (!isSetBGColor())
-    setBGColor(document.getElementById("t2").value);
+    setBGColor(document.getElementById("html5jp-cpick").value);
   else
-    document.getElementById("t2").value = getBGColor();
+    document.getElementById("html5jp-cpick").value = getBGColor();
   
   if (getStateKind() == STATE_END)
     updateBGColor();

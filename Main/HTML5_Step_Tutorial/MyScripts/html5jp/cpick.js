@@ -1271,7 +1271,7 @@ function _initNormal() {
 function _initIE() {
   var n = 0;
 
-  var elm = document.getElementById("t2");
+  var elm = document.getElementById("html5jp-cpick");
   // parse parameters in the class attribute
   var p = {};
   var m = elm.className.match(/\[([^\]]+)\]/);
