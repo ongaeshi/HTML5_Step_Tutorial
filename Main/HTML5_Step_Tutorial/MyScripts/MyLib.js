@@ -21,6 +21,14 @@ var fixEvent = function(ev) {
   return ev;
 }
 
+var addEvent = function(obj,type,fn) {
+  if(obj.attachEvent) {
+    obj.attachEvent("on"+type,fn);
+  } else {
+    obj.addEventListener(type,fn,false);
+  }
+}
+
 // --- Math ------------------------------------  
 
 var MyMath = (function() {
@@ -49,7 +57,7 @@ var MyMath = (function() {
 
     rad2deg: function(radian) {
       return ( radian * 180 / Math.PI );
-    },
+    }
   };
 })();
 
@@ -68,6 +76,6 @@ var getBGColor = function(color) {
 }
 
 var updateBGColor = function() {
-  document.body.style.background = getBGColor();
+//  document.body.style.background = getBGColor();
 }
   
