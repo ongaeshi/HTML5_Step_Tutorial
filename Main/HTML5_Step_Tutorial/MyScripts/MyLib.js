@@ -76,6 +76,6 @@ var getBGColor = function(color) {
 }
 
 var updateBGColor = function() {
-//  document.body.style.background = getBGColor();
+  document.body.style.background = getBGColor();
 }
   

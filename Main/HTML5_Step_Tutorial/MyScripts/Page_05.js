@@ -33,12 +33,12 @@ var setupDragAndDrop = function() {
   };
 }
 
-window.addEventListener("load", function() {
+addEvent(window, "load", function() {
   if (getStateKind() == STATE_END)
     updateBGColor();
 
   setupDragAndDrop();
 
-}, true);
+});
 
 // ---
