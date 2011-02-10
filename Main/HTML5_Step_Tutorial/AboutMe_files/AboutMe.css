@@ -202,11 +202,21 @@
     opacity: 1.00;
 }
 a {
-    color: rgb(114, 174, 18);
+    color: rgb(19, 128, 36);
     text-decoration: none;
 }
 a:visited {
-    color: rgb(114, 174, 18);
+    color: rgb(19, 128, 36);
+    text-decoration: none;
+}
+a.class1 {
+    color: rgb(19, 128, 36);
+}
+a.class1:visited {
+    color: rgb(19, 128, 36);
+}
+a.class1:hover {
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 a:hover {

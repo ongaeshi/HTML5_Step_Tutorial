@@ -23,7 +23,7 @@ var STATE_END             = 12;
 var state_start = {
   chkStatus: function() {
     // @debug
-    //setState(STATE_ITEM06);
+    //setState(STATE_END_OPEN);
     //return true;
     
     if (PageCounter.count("/HTML5_Step_Tutorial/Page_01.html") > 0) {
@@ -320,13 +320,13 @@ var state_end_open = {
         Item.text(ITEM_05); Item.arrow(ITEM_05);
         Item.text(ITEM_06);
         break;
-      case 60:
+      case 30:
         Item.arrow_anim(ITEM_06);
         break;
-      case 180:
+      case 100:
         updateBGColor();
         break;
-      case 270:
+      case 180:
         document.getElementById("StaffRoll").style.display = "";
         break;
       }

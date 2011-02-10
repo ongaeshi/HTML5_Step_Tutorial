@@ -253,11 +253,11 @@ EOF
     insert_file(f, from, to)
 
     from = <<EOF
-                <p style="padding-bottom: 0pt; " class="paragraph_style_7"><span style="font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 18px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 27px; ">好きな色をクリック！</span>  </p>
+                <p style="padding-bottom: 0pt; font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 18px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 27px;" class="paragraph_style_7">好きな色を選んでね！</p>
 EOF
 
     to = <<EOF
-                <p style="padding-bottom: 0pt; " class="paragraph_style_7"><span style="font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 18px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 27px; ">好きな色をクリック！</span>  </p>
+                <p style="padding-bottom: 0pt; font-family: 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN'; font-size: 18px; font-stretch: normal; font-style: normal; font-weight: 600; line-height: 27px;" class="paragraph_style_7">好きな色を選んでね！</p>
                 <div class="cpick">
                   <input type="text" name="c2" value="#878585" size="36" id="html5jp-cpick" class="html5jp-cpick [coloring:true;callback:changeCpick]" />
                 </div>
@@ -289,71 +289,71 @@ EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id4" style="height: 54px; left: 152px; position: absolute; top: 115px; width: 550px; z-index: 1; " class="style_SkipStroke_4 shape-with-text">
+          <div id="id4" style="height: 54px; left: 154px; position: absolute; top: 115px; width: 550px; z-index: 1; " class="style_SkipStroke_4 shape-with-text">
 EOF
     to = <<EOF
-          <div id="Page_01" style="height: 54px; left: 152px; position: absolute; top: 115px; width: 550px; z-index: 1; " class="style_SkipStroke_4 shape-with-text">
+          <div id="Page_01" style="height: 54px; left: 154px; position: absolute; top: 115px; width: 550px; z-index: 1; " class="style_SkipStroke_4 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id5" style="height: 54px; left: 151px; position: absolute; top: 192px; width: 551px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id5" style="height: 54px; left: 151px; position: absolute; top: 192px; width: 551px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
 EOF
     to = <<EOF
-          <div id="Page_02" style="height: 54px; left: 151px; position: absolute; top: 193px; width: 551px; z-index: 1; display:none" class="style_SkipStroke_6 shape-with-text">
+          <div id="Page_02" style="height: 54px; left: 151px; position: absolute; top: 192px; width: 551px; z-index: 1; display:none" class="style_SkipStroke_5 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id6" style="height: 54px; left: 152px; position: absolute; top: 267px; width: 550px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id6" style="height: 54px; left: 152px; position: absolute; top: 267px; width: 550px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
 EOF
     to = <<EOF
           <div>
             <canvas id="canvas_02" width="550" height="60" style="position: absolute; top: 193px; left: 151px; z-index: 2; display: none;"></canvas>
           </div>
 
-          <div id="Page_03" style="height: 54px; left: 152px; position: absolute; top: 267px; width: 550px; z-index: 1; display:none" class="style_SkipStroke_6 shape-with-text">
+          <div id="Page_03" style="height: 54px; left: 152px; position: absolute; top: 267px; width: 550px; z-index: 1; display:none" class="style_SkipStroke_5 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id7" style="height: 54px; left: 152px; position: absolute; top: 343px; width: 550px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id7" style="height: 54px; left: 152px; position: absolute; top: 343px; width: 550px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
 EOF
     to = <<EOF
           <div>
             <canvas id="canvas_03" width="550" height="60" style="position: absolute; top: 267px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
-          <div id="Page_04" style="height: 54px; left: 152px; position: absolute; top: 343px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
+          <div id="Page_04" style="height: 54px; left: 152px; position: absolute; top: 343px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_5 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id8" style="height: 54px; left: 152px; position: absolute; top: 423px; width: 550px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id8" style="height: 54px; left: 152px; position: absolute; top: 423px; width: 550px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
 EOF
     to = <<EOF
           <div>
             <canvas id="canvas_04" width="550" height="60" style="position: absolute; top: 343px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
-          <div id="Page_05" style="height: 54px; left: 152px; position: absolute; top: 423px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
+          <div id="Page_05" style="height: 54px; left: 152px; position: absolute; top: 423px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_5 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id9" style="height: 54px; left: 152px; position: absolute; top: 502px; width: 550px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
+          <div id="id9" style="height: 54px; left: 152px; position: absolute; top: 502px; width: 550px; z-index: 1; " class="style_SkipStroke_5 shape-with-text">
 EOF
     to = <<EOF
           <div>
             <canvas id="canvas_05" width="550" height="60" style="position: absolute; top: 423px; left: 152px; z-index: 2; display: none;"></canvas>
           </div>
 
-          <div id="Page_06" style="height: 54px; left: 152px; position: absolute; top: 502px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_6 shape-with-text">
+          <div id="Page_06" style="height: 54px; left: 152px; position: absolute; top: 502px; width: 550px; z-index: 1; display: none;" class="style_SkipStroke_5 shape-with-text">
 EOF
     insert_file(f, from, to)
 
     from = <<EOF
-          <div id="id10" style="height: 46px; left: 26px; position: absolute; top: 604px; width: 648px; z-index: 1; " class="style_SkipStroke_7 shape-with-text">
+          <div id="id10" style="height: 46px; left: 26px; position: absolute; top: 604px; width: 648px; z-index: 1; " class="style_SkipStroke_6 shape-with-text">
 EOF
     to = <<EOF
           <div>
